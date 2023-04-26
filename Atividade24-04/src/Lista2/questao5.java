@@ -7,11 +7,11 @@ public class questao5 {
 	public static void main(String[] args) {
 		Scanner leia = new Scanner (System.in);
 		
-		String caracter;
+		char caracter;
 		boolean confirma = false;
 		
 		System.out.println("Digite um carácter: ");
-		caracter = leia.next();
+		caracter = leia.next().charAt(0);
 		
 		confirma = verificacao(caracter);
 		if(confirma) {
@@ -24,8 +24,8 @@ public class questao5 {
 		leia.close();
 	}
 	
-	static boolean verificacao(String caracter) {
-		if(caracter.matches("[A-Z]*")) {
+	static boolean verificacao(char caracter) {
+		if(Character.toString(caracter).matches("[A-Z]*")) {
 			return true;
 			
 		} else {

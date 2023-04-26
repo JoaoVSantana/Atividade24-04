@@ -6,19 +6,19 @@ public class questao8 {
 	public static void main(String[] args) {
 		Scanner leia = new Scanner(System.in);
 
-		String caracter;
+		char caracter;
 		
 		System.out.println("Digite um caracter: ");
-		caracter = leia.next();
+		caracter = leia.next().charAt(0);
 		
 		System.out.println(aumenta(caracter));
 		
 		leia.close();
 	}
 	
-	static String aumenta (String caracter) {
-		caracter = caracter.toUpperCase();
+	static char aumenta (char caracter) {
 		
-		return caracter;
+		return Character.toUpperCase(caracter);
+		
 	}
 }

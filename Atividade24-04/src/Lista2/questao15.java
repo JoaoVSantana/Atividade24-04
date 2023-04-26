@@ -2,30 +2,30 @@ package Lista2;
 
 import java.util.Scanner;
 
-public class questao6 {
+public class questao15 {
 
 	public static void main(String[] args) {
 		Scanner leia = new Scanner (System.in);
 		
-		char caracter;
+		String caracter;
 		boolean confirma = false;
 		
 		System.out.println("Digite um carácter: ");
-		caracter = leia.next().charAt(0);
+		caracter = leia.next();
 		
 		confirma = verificacao(caracter);
 		if(confirma) {
-			System.out.println("O carácter digitado pertence ao alfabeto minúsculo");
+			System.out.println("O carácter digitado pertence ao alfabeto maiúsculo");
 			
 		} else {
-			System.out.println("O carácter digitado não pertence ao alfabeto minúsculo");
+			System.out.println("O carácter digitado não pertence ao alfabeto maiúsculo");
 		}
 		
 		leia.close();
 	}
 	
-	static boolean verificacao(char caracter) {
-		if(Character.toString(caracter).matches("[a-z]*")) {
+	static boolean verificacao(String caracter) {
+		if(caracter.matches("[A-Z]*")) {
 			return true;
 			
 		} else {

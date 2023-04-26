@@ -7,25 +7,25 @@ public class questao4 {
 	public static void main(String[] args) {
 		Scanner leia = new Scanner (System.in);
 		
-		String caracter;
+		char caracter;
 		boolean confirma = false;
 		
 		System.out.println("Digite um carácter: ");
-		caracter = leia.next();
+		caracter = leia.next().charAt(0);
 		
 		confirma = verificacao(caracter);
 		if(confirma) {
-			System.out.println("O carácter digitado pertence ao alfabeto");
+			System.out.println("O carácter digitado é uma letra");
 			
 		} else {
-			System.out.println("O carácter digitado não pertence ao alfabeto");
+			System.out.println("O carácter digitado não é uma letra");
 		}
 		
 		leia.close();
 	}
 	
-	static boolean verificacao(String caracter) {
-		if(caracter.matches("[A-Z]*") || caracter.matches("[a-z]*")) {
+	static boolean verificacao(char caracter) {
+		if(Character.toString(caracter).matches("[A-Z]*") || Character.toString(caracter).matches("[a-z]*")) {
 			return true;
 			
 		} else {

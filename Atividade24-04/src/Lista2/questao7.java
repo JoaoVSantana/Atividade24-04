@@ -7,25 +7,25 @@ public class questao7 {
 	public static void main(String[] args) {
 		Scanner leia = new Scanner (System.in);
 		
-		String caracter;
+		char caracter;
 		boolean confirma = false;
 		
 		System.out.println("Digite um carácter: ");
-		caracter = leia.next();
+		caracter = leia.next().charAt(0);
 		
 		confirma = verificacao(caracter);
 		if(confirma) {
-			System.out.println("O carácter digitado é um algarismo");
+			System.out.println("O carácter digitado é um número");
 			
 		} else {
-			System.out.println("O carácter digitado não é um algarismo");
+			System.out.println("O carácter digitado não é um número");
 		}
 		
 		leia.close();
 	}
 	
-	static boolean verificacao(String caracter) {
-		if(caracter.matches("[0-9]*")) {
+	static boolean verificacao(char caracter) {
+		if(Character.toString(caracter).matches("[0-9]*")) {
 			return true;
 			
 		} else {

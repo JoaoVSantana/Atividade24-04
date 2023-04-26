@@ -13,30 +13,25 @@ public class questao13 {
 		caracter = leia.next();
 
 		confirma = verifica(caracter);
-		do {
 
-			if (confirma) {
-				System.out.println("Ok.\n Digite um caracter binário");
-	
+		if (confirma) {
+			System.out.println("Ok");
 
-			} else {
-				System.out.println("carácter fora da cadeia binária");
-			
-			}
-		} while (caracter.matches("[0-1]*"));
+		} else {
+			System.out.println("Carácter fora da cadeia binária");
+
+		}
 
 		leia.close();
 	}
 
 	static boolean verifica(String caracter) {
-//		do {
 
-			if (caracter.matches("[0-1]*")) {
-				return true;
+		if (caracter.matches("[0-1]*")) {
+			return true;
 
-			} else {
-				return false;
-			}
-//		} while (caracter.matches("[0-1]*"));
+		} else {
+			return false;
+		}
 	}
 }

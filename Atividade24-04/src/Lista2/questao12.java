@@ -13,6 +13,8 @@ public class questao12 {
 		nome = leia.nextLine();
 		
 		System.out.println(sobrenome(nome));
+		
+		leia.close();
 
 	}
 	
